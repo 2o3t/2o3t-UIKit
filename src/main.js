@@ -23,6 +23,8 @@ import router from '@router';
 // test
 import Shared from '@/shared';
 Vue.use(Shared);
+import Filters from '@/filters';
+Vue.use(Filters);
 
 new Vue({
     router,

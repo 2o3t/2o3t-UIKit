@@ -13,10 +13,14 @@
                 </ot-link>
             </div>
         </div>
+        <div :class="$style.content">
+            <application></application>
+        </div>
     </div>
 </template>
 
 <script>
+import Application from './Application';
 export default {
     otDefaultColors() {
         return {
@@ -28,6 +32,9 @@ export default {
                 disabled: [ 'def-f-dis' ],
             },
         };
+    },
+    components: {
+        Application,
     },
 };
 </script>
@@ -63,9 +70,13 @@ export default {
 
         .btn {
             margin: 2em 1em;
-            overflow: hidden;
             display: inline-block;
         }
+    }
+
+    .content {
+        max-width: 1080px;
+        margin: auto;
     }
 }
 </style>

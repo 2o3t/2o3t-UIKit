@@ -46,7 +46,7 @@ const routerMapConfig = {
         {
             path: '/',
             name: 'Home-page',
-            component: () => asyncImport(import('@views/Home')),
+            component: () => asyncImport(import('@views/Home/index.vue')),
         },
         // {
         //     path: '/components',

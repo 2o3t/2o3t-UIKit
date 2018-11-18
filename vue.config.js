@@ -24,6 +24,9 @@ const vueConfig = {
                     // 'highlight.js': 'hljs',
                     // 'markdown-it': 'markdownit',
                     // clipboard: 'clipboard-polyfill',
+                    // vue: 'Vue',
+                    // 'vue-router': 'VueRouter',
+                    axios: 'axios',
                 }),
             });
         }

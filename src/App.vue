@@ -4,7 +4,7 @@
         <ot-nav :isCollapse="isCollapse" :theme="$otTheme" placement="right">
             <ot-link slot="left" to="/">
                 <ot-logo :theme="$otTheme" icon="logo">
-                    <span>2O3T-UIKIT</span>
+                    <span>2O3T</span>
                     <!-- <span slot="subtitle">2O3T</span> -->
                 </ot-logo>
             </ot-link>

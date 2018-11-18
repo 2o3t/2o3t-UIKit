@@ -1,8 +1,3 @@
-# 2o3t.github.io
+# 2O3T UIKIT Website
 
-
-Depend on Vue-cli...
-
-
-Watch this space!
-
+2O3T Website
