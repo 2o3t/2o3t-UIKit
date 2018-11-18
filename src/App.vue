@@ -39,9 +39,9 @@
         <router-view :theme="$otTheme" :class="$style.content"></router-view>
         <!-- </keep-alive> -->
     </ot-main>
-    <ot-footer :class="$style.footer">
+    <!-- <ot-footer :class="$style.footer">
 
-    </ot-footer>
+    </ot-footer> -->
   </ot-container>
 </template>
 
@@ -97,7 +97,8 @@ export default {
 <style lang="scss" module>
 .root {
     position: relative;
-    min-height: 100%;
+    height: 100%;
+    min-height: 50%;
 
     &[theme='dark'] {
         background-color: #242424;
@@ -114,9 +115,16 @@ export default {
     .nav {
         justify-content: flex-end;
     }
+
+    @media screen and (max-width: 767px) {
+        .right {
+            display: none;
+        }
+    }
 }
 .pager {
     margin-top: -6em;
+    height: 100%;
 
     .content {
         box-sizing: border-box;
