@@ -34,7 +34,7 @@
             </ot-row>
         </ot-nav>
     </ot-header>
-    <ot-main :class="$style.pager">
+    <ot-main :class="$style.main">
         <!-- <keep-alive> -->
         <router-view :theme="$otTheme" :class="$style.content"></router-view>
         <!-- </keep-alive> -->
@@ -122,9 +122,10 @@ export default {
         }
     }
 }
-.pager {
+.main {
     margin-top: -6em;
     height: 100%;
+    overflow: hidden;
 
     .content {
         box-sizing: border-box;
