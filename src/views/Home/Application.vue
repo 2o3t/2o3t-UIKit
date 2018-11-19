@@ -14,6 +14,7 @@
                 </div>
             </ot-card>
         </ot-row-group>
+        <div :class="$style.devide"></div>
         <h1 :class="$style.center" ot v-ot-bind="$otColors.title">OTHERS</h1>
         <p :class="[$style.center, $style.desc]" ot v-ot-bind="$otColors.desc" disabled>其他一些工具库</p>
         <ot-row-group :fixable="false">
@@ -138,6 +139,10 @@ export default {
 
     .desc[ot] {
         cursor: auto;
+    }
+
+    .devide {
+        height: 10em;
     }
 }
 </style>

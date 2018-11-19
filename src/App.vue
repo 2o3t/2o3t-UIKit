@@ -111,6 +111,11 @@ export default {
     width: 100%;
     height: 6em;
     z-index: 10;
+    background-color: rgba($color: #ffffff, $alpha: .75);
+
+    &[theme='dark'] {
+        background-color: rgba($color: #242424, $alpha: .75);
+    }
 
     .nav {
         justify-content: flex-end;
