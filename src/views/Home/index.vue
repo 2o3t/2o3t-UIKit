@@ -2,7 +2,7 @@
     <div :class="$style.root">
         <div :class="$style.banner">
             <div :class="$style.box">
-                <ot-icon :class="$style.logo" v-ot-bind="$otColors.logo" icon="logo" lib="font-ot" size="20em"></ot-icon>
+                <ot-icon :class="$style.logo" v-bind="$otColors.logo" icon="logo" lib="font-ot" size="20em"></ot-icon>
                 <p ot v-ot-bind="$otColors.logo" :class="$style.text">2O3T-UIKIT</p>
                 <p ot v-ot-bind="$otColors.desc" disabled>基于模块化的解决方案，服务于个人产品的设计体系，让开发者专注于更好的用户体验。</p>
                 <ot-link :class="$style.btn" href="//2o3t.github.io/2o3t-ui/">

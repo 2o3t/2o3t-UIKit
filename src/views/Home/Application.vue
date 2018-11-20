@@ -58,7 +58,6 @@ export default {
             names: [
                 '2o3t-ui',
                 '2o3t-IconFont',
-                '2o3t-CLI',
             ],
         };
     },
