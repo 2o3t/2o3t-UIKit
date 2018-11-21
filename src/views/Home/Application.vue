@@ -1,5 +1,5 @@
 <template>
-    <div :class="$style.root">
+    <section :class="$style.root">
         <h1 :class="$style.center" ot v-ot-bind="$otColors.title">UIKIT</h1>
         <p :class="[$style.center, $style.desc]" ot v-ot-bind="$otColors.desc" disabled>视觉UI组件库</p>
         <ot-row-group :fixable="false">
@@ -29,10 +29,12 @@
                 </div>
             </ot-card>
         </ot-row-group>
-    </div>
+        <div :class="$style.devide"></div>
+    </section>
 </template>
 
 <script>
+import applications from '@data/applications';
 import axios from 'axios';
 export default {
     otDefaultColors() {
@@ -48,17 +50,10 @@ export default {
     },
     data() {
         return {
-            url: 'https://api.github.com/users/2o3t/repos',
+            url: applications.url,
             result: null,
-            ignores: [
-                '2o3t-Templates',
-                '2o3t-UIKit-Website',
-                '2o3t.github.io',
-            ],
-            names: [
-                '2o3t-ui',
-                '2o3t-IconFont',
-            ],
+            ignores: applications.ignores,
+            names: applications.names,
         };
     },
     computed: {

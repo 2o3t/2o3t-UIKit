@@ -40,7 +40,7 @@ const scrollBehavior = (to, from, savedPosition) => {
 };
 
 const routerMapConfig = {
-    // mode: 'history',
+    mode: 'history',
     scrollBehavior,
     routes: [
         {

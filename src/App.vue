@@ -5,7 +5,7 @@
             <ot-link slot="left" to="/">
                 <ot-logo :theme="$otTheme" icon="logo">
                     <span>2O3T</span>
-                    <!-- <span slot="subtitle">2O3T</span> -->
+                    <span slot="subtitle">UIKit</span>
                 </ot-logo>
             </ot-link>
             <!-- <ot-nav-item v-for="(item) in headers" :key="item.name" :to="item.router" :href="item.href">{{item.name}}</ot-nav-item> -->
@@ -39,9 +39,6 @@
         <router-view :theme="$otTheme" :class="$style.content"></router-view>
         <!-- </keep-alive> -->
     </ot-main>
-    <!-- <ot-footer :class="$style.footer">
-
-    </ot-footer> -->
   </ot-container>
 </template>
 
@@ -97,17 +94,16 @@ export default {
 <style lang="scss" module>
 .root {
     position: relative;
-    height: 100%;
-    min-height: 50%;
+    min-height: 100%;
 
     &[theme='dark'] {
         background-color: #242424;
     }
 }
 .header {
-    // position: fixed;
-    // top: 0;
-    // left: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 6em;
     z-index: 10;
@@ -128,16 +124,12 @@ export default {
     }
 }
 .main {
-    margin-top: -6em;
-    height: 100%;
-    overflow: hidden;
+    padding-top: 0em;
 
     .content {
-        box-sizing: border-box;
         height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
-}
-.footer {
-
 }
 </style>

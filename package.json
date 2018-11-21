@@ -10,14 +10,16 @@
         "deploy:auto": "sh ./.2o3t/bin/autoDeploy.sh",
         "deploy": "sh ./bin/deploy.sh"
     },
+    "private": true,
     "license": "MIT",
     "main": "webs/index.js",
     "files": [
         "webs/**/*"
     ],
     "dependencies": {
-        "2o3t-icon-font": "^0.0.12",
-        "2o3t-ui": "^0.0.59",
+        "2o3t-css-colors": "^0.0.19",
+        "2o3t-icon-font": "^0.0.15",
+        "2o3t-ui": "^0.0.63",
         "axios": "^0.18.0",
         "cheerio": "^1.0.0-rc.2",
         "clipboard-polyfill": "^2.7.0",

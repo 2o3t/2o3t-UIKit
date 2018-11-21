@@ -1,0 +1,13 @@
+{
+    "url": "https://api.github.com/users/2o3t/repos",
+    "ignores": [
+        "2o3t-Templates",
+        "2o3t-UIKit-Website",
+        "2o3t.github.io"
+    ],
+    "names": [
+        "2o3t-ui",
+        "2o3t-IconFont",
+        "2o3t-GitMOJI"
+    ]
+}

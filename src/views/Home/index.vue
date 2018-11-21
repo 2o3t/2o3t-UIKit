@@ -16,11 +16,13 @@
         <div :class="$style.content">
             <application></application>
         </div>
+        <h-footer></h-footer>
     </div>
 </template>
 
 <script>
 import Application from './Application';
+import HFooter from './Footer';
 export default {
     otDefaultColors() {
         return {
@@ -35,6 +37,7 @@ export default {
     },
     components: {
         Application,
+        HFooter,
     },
 };
 </script>
@@ -44,7 +47,7 @@ export default {
 
     .banner {
         position: relative;
-        height: 100%;
+        height: 100vh;
         width: 100%;
         text-align: center;
 
