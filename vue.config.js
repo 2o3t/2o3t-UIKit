@@ -1,5 +1,7 @@
 const path = require('path');
 const debug = process.env.NODE_ENV !== 'production';
+const PrerenderSpaPlugin = require('prerender-spa-plugin');
+const Renderer = PrerenderSpaPlugin.PuppeteerRenderer;
 
 const autoBuildIndex = require('./.2o3t/bin/autoBuildIndex');
 const loadLibs = [
@@ -55,6 +57,23 @@ const vueConfig = {
             }),
             extensions: [ '.js', '.jsx', '.vue', '.json', '.css' ],
         });
+
+        if (!debug) {
+            config.plugins.push(new PrerenderSpaPlugin({
+                // 将渲染的文件放到dist目录下
+                staticDir: path.join(__dirname, './webs'),
+                // 需要预渲染的路由信息
+                routes: [ '/' ],
+                renderer: new Renderer({// 这样写renderAfterTime生效了
+                    renderAfterTime: 50000,
+                    inject: {
+                        foo: 'bar',
+                    },
+                    headless: false,
+                    renderAfterDocumentEvent: 'render-event',
+                }),
+            }));
+        }
     },
     chainWebpack: config => {
         customLoader(config);

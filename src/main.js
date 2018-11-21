@@ -26,13 +26,17 @@ Vue.use(Filters);
 const app = new Vue({
     router,
     render: h => h(App),
+    /* 这句非常重要，否则预渲染将不会启动 */
+    mounted() {
+        // 解决移动端 hover 问题
+        if (document) {
+            document.body.addEventListener('touchstart', function() { });
+        }
+        document.dispatchEvent(new Event('render-event'));
+    },
 });
 
 router.onReady(() => {
     app.$mount('#app');
 });
 
-// 解决移动端 hover 问题
-if (document) {
-    document.body.addEventListener('touchstart', function() { });
-}
