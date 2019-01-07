@@ -3,6 +3,9 @@ const debug = process.env.NODE_ENV !== 'production';
 const PrerenderSpaPlugin = require('prerender-spa-plugin');
 const Renderer = PrerenderSpaPlugin.PuppeteerRenderer;
 
+const CompressionWebpackPlugin = require('compression-webpack-plugin');
+const productionGzipExtensions = [ 'js', 'css' ];
+
 const autoBuildIndex = require('./.2o3t/bin/autoBuildIndex');
 const loadLibs = [
     'components',
@@ -40,6 +43,14 @@ const vueConfig = {
                     axios: 'axios',
                 }),
             });
+
+            // gzip
+            config.plugins.push(new CompressionWebpackPlugin({
+                algorithm: 'gzip',
+                test: new RegExp('\\.(' + productionGzipExtensions.join('|') + ')$'),
+                threshold: 10240,
+                minRatio: 0.8,
+            }));
         }
 
         const resolve = config.resolve || {};
