@@ -21,7 +21,7 @@ export default {
         return {
             normal: [ 'def-f-n', 'def-bg-n' ],
             text: {
-                normal: this.color === 'default' ? [ ] : [ 'light-f-n' ],
+                normal: this.color === 'default' ? [ 'light-f-n' ] : [ 'dark-f-n' ],
             },
         };
     },

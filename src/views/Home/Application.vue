@@ -8,10 +8,10 @@
                     <h3 ot v-ot-bind="$otColors.title" :class="$style.title">{{ item.name }}</h3>
                     <div ot v-ot-bind="$otColors.desc">{{ item.description }}</div>
                 </ot-link>
-                <div slot="bottom" ot v-ot-bind="$otColors.desc" :class="[$style.bottom, $style.desc]" disabled>
+                <ot-link slot="bottom" ot v-ot-bind="$otColors.desc" :class="[$style.bottom, $style.desc]" target="_blank" :href="`//2o3t.github.io/${item.name}`">
                     <ot-icon icon="code" lib="font-ot">{{ item.language }}</ot-icon>
                     <ot-icon :class="$style.time" icon="time-circle" lib="font-ot">{{ item.updated_at | DateFormat }}</ot-icon>
-                </div>
+                </ot-link>
             </ot-card>
         </ot-row-group>
         <div :class="$style.devide"></div>
@@ -19,14 +19,14 @@
         <p :class="[$style.center, $style.desc]" ot v-ot-bind="$otColors.desc" disabled>其他一些工具库</p>
         <ot-row-group :fixable="false">
             <ot-card :class="$style.card" v-for="(item, index) in _others" :key="index" round>
-                <ot-link slot="top" disabled>
+                <ot-link slot="top" target="_blank" :href="item.html_url">
                     <h3 ot v-ot-bind="$otColors.title" :class="$style.title">{{ item.name }}</h3>
                     <div ot v-ot-bind="$otColors.desc">{{ item.description }}</div>
                 </ot-link>
-                <div slot="bottom" ot v-ot-bind="$otColors.desc" :class="[$style.bottom, $style.desc]" disabled>
+                <ot-link slot="bottom" ot v-ot-bind="$otColors.desc" :class="[$style.bottom, $style.desc]" target="_blank" :href="item.html_url">
                     <ot-icon icon="code" lib="font-ot">{{ item.language }}</ot-icon>
                     <ot-icon :class="$style.time" icon="time-circle" lib="font-ot">{{ item.updated_at | DateFormat }}</ot-icon>
-                </div>
+                </ot-link>
             </ot-card>
         </ot-row-group>
         <div :class="$style.devide"></div>
